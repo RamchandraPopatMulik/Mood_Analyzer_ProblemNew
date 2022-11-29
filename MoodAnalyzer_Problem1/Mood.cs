@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using MoodAnalyzer_Problem1;
 namespace MoodAnalyzer_Problem1
 {
     public class Mood
     {
-        string message;
+        string message=string.Empty;
         public Mood()
         {
 
@@ -26,16 +26,26 @@ namespace MoodAnalyzer_Problem1
                 {
                     return "Happy";
                 }
-                else
+                bool result2 = message.Contains("Sad", StringComparison.OrdinalIgnoreCase);
+                if (result2)
                 {
                     return "SAD";
                 }
+                else
+                {
+                    return "Happy";
+                }
             }
-            catch
+            catch (Exception ex)
             {
                 return "Happy";
             }
-          
         }
+    }
+    public enum MoodError
+    {
+        Invalid,
+        Null,
+        Empty
     }
 }
