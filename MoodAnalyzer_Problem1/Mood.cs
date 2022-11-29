@@ -8,7 +8,16 @@ namespace MoodAnalyzer_Problem1
 {
     public class Mood
     {
-        public string AnalyzeString(string message)
+        string message;
+        public Mood()
+        {
+
+        }
+        public Mood (string message)
+        {
+            this.message = message;
+        }
+        public string AnalyzeString()
         {
             bool result1 = message.Contains("Happy",StringComparison.OrdinalIgnoreCase);
             if(result1)

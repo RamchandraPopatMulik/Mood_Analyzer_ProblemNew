@@ -6,8 +6,8 @@
         {
             Console.WriteLine("Please Enter Your String to Check the Mood");
             string mood = Console.ReadLine();
-            Mood mood1 = new Mood();
-            mood1.AnalyzeString(mood);
+            Mood mood1 = new Mood(mood);
+            mood1.AnalyzeString();
         }
     }
 }
